@@ -23,5 +23,12 @@ namespace Sokolov.Admin
         {
             InitializeComponent();
         }
+
+        private void AddNewEmployee(object sender, RoutedEventArgs e)
+        {
+            AddEmployeeWindow addEmployeeWindow = new AddEmployeeWindow();
+            addEmployeeWindow.Show();
+            this.Close();
+        }
     }
 }

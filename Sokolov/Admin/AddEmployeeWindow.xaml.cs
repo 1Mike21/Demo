@@ -1,5 +1,4 @@
-﻿using Sokolov.Admin;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,11 +15,11 @@ using System.Windows.Shapes;
 namespace Sokolov.Admin
 {
     /// <summary>
-    /// Interaction logic for AdminWindow.xaml
+    /// Interaction logic for AddEmployeeWindow.xaml
     /// </summary>
-    public partial class AdminWindow : Window
+    public partial class AddEmployeeWindow : Window
     {
-        public AdminWindow()
+        public AddEmployeeWindow()
         {
             InitializeComponent();
         }

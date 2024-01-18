@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Sokolov
+namespace Sokolov.Admin
 {
     /// <summary>
     /// Interaction logic for AdminWindow.xaml

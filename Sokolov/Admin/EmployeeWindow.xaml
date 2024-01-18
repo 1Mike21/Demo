@@ -24,14 +24,15 @@
                 <DataGridTextColumn Header="ID"/>
                 <DataGridTextColumn Header="Имя"/>
                 <DataGridTextColumn Header="Фамилия"/>
+                <DataGridTextColumn Header="Роль"/>
                 <DataGridTextColumn Header="Статус"/>
                 <DataGridTextColumn Header="Логин"/>
                 <DataGridTextColumn Header="Пароль"/>
             </DataGrid.Columns>
         </DataGrid>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0">
-            <Button Content="Уволить выбранного сотрудника" Style="{StaticResource BtnDismissEmployee}"/>
-            <Button Content="Добавить нового сотрудника" Margin="0,20,0,15"/>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0">
+            <Button Width="200" Content="Уволить выбранного сотрудника" Style="{StaticResource BtnDismissEmployee}"/>
+            <Button Content="Добавить нового сотрудника" Click="AddNewEmployee" Margin="0,20,0,15"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -71,5 +71,8 @@
                 </Style>
             </Style.Resources>
         </Style>
+        <Style TargetType="ComboBox" x:Key="RolesList">
+            <Setter Property="Width" Value="200"/>
+        </Style>
     </Application.Resources>
 </Application>

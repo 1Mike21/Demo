@@ -1,5 +1,5 @@
 ﻿Sokolov
-
+1.0.0.0
 
 winexe
 C#
@@ -12,7 +12,7 @@ TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\App.xaml
 457195656
 
-6-258084035
+8799160530
 198-1448991843
 Admin\AddEmployeeWindow.xaml;Admin\AdminWindow.xaml;Admin\EmployeeWindow.xaml;MainWindow.xaml;
 
