@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sokolov"
         mc:Ignorable="d"
-        Title="Авторизация" SizeToContent="WidthAndHeight">
+        Background="LightSeaGreen"
+        SizeToContent="WidthAndHeight"
+        Title="Авторизация">
     <Grid>
         <!--Определение строк сетки-->
         <Grid.RowDefinitions>
@@ -25,20 +27,21 @@
         </Grid.ColumnDefinitions>
 
         <!--StackPanel для упорядочивания элементов в столбце и центрирования-->
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <!--Label для отображения текста Логин-->
-            
-            <Label Content="Логин:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"/>
-            <!--TextBox для ввода логина-->
-            <TextBox x:Name="UsernameTextBox" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,10,0" Height="31"/>
-
-            <!--Label для отображения текста Пароль:-->
-            <Label Content="Пароль:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"/>
-            <!--PasswordBox для ввода пароля-->
-            <PasswordBox x:Name="PasswordBox" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,10,0" Height="31"/>
-
+        <StackPanel Grid.Row="1" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <!--Label для отображения текста Логин-->
+                <Label Content="Логин:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"/>
+                <!--TextBox для ввода логина-->
+                <TextBox x:Name="UsernameTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="18,0,10,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <!--Label для отображения текста Пароль:-->
+                <Label Content="Пароль:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"/>
+                <!--PasswordBox для ввода пароля-->
+                <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,10,0"/>
+            </StackPanel>
             <!--Button для выполнения действия Войти-->
-            <Button Content="Войти" HorizontalAlignment="Center" Margin="10" Height="30" Width="200"/>
+            <Button Style="{StaticResource BtnLogin}" Content="Войти" HorizontalAlignment="Center" Margin="10"/>
         </StackPanel>
     </Grid>
 </Window>

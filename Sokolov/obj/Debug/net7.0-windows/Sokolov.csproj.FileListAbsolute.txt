@@ -18,3 +18,7 @@ Z:\Sokolov\Sokolov\obj\Debug\net7.0-windows\refint\Sokolov.dll
 Z:\Sokolov\Sokolov\obj\Debug\net7.0-windows\Sokolov.pdb
 Z:\Sokolov\Sokolov\obj\Debug\net7.0-windows\Sokolov.genruntimeconfig.cache
 Z:\Sokolov\Sokolov\obj\Debug\net7.0-windows\ref\Sokolov.dll
+Z:\Sokolov\Sokolov\obj\Debug\net7.0-windows\AdminWindow.g.cs
+Z:\Sokolov\Sokolov\obj\Debug\net7.0-windows\App.baml
+Z:\Sokolov\Sokolov\obj\Debug\net7.0-windows\AdminWindow.baml
+Z:\Sokolov\Sokolov\obj\Debug\net7.0-windows\Sokolov.sourcelink.json

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\Sokolov\\Sokolov\\Sokolov.csproj": {}
+    "C:\\Users\\Skosyrev.M.A\\Desktop\\Sokolov\\Sokolov\\Sokolov.csproj": {}
   },
   "projects": {
-    "Z:\\Sokolov\\Sokolov\\Sokolov.csproj": {
+    "C:\\Users\\Skosyrev.M.A\\Desktop\\Sokolov\\Sokolov\\Sokolov.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\Sokolov\\Sokolov\\Sokolov.csproj",
+        "projectUniqueName": "C:\\Users\\Skosyrev.M.A\\Desktop\\Sokolov\\Sokolov\\Sokolov.csproj",
         "projectName": "Sokolov",
-        "projectPath": "Z:\\Sokolov\\Sokolov\\Sokolov.csproj",
+        "projectPath": "C:\\Users\\Skosyrev.M.A\\Desktop\\Sokolov\\Sokolov\\Sokolov.csproj",
         "packagesPath": "C:\\Users\\Skosyrev.M.A\\.nuget\\packages\\",
-        "outputPath": "Z:\\Sokolov\\Sokolov\\obj\\",
+        "outputPath": "C:\\Users\\Skosyrev.M.A\\Desktop\\Sokolov\\Sokolov\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Skosyrev.M.A\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
