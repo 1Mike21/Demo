@@ -22,3 +22,13 @@ Z:\Sokolov\Sokolov\obj\Debug\net7.0-windows\AdminWindow.g.cs
 Z:\Sokolov\Sokolov\obj\Debug\net7.0-windows\App.baml
 Z:\Sokolov\Sokolov\obj\Debug\net7.0-windows\AdminWindow.baml
 Z:\Sokolov\Sokolov\obj\Debug\net7.0-windows\Sokolov.sourcelink.json
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\AdminWindow.g.cs
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\Admin\AdminWindow.g.cs
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\Admin\EmployeeWindow.g.cs
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\Sokolov_MarkupCompile.cache
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\Sokolov_MarkupCompile.lref
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\Sokolov.dll
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\refint\Sokolov.dll
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\Sokolov.pdb
