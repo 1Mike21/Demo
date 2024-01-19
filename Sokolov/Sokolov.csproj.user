@@ -10,10 +10,19 @@
     <Compile Update="Admin\AddEmployeeWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Admin\AddShiftWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Admin\AdminWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Admin\EmployeeWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Admin\OrdersWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Admin\ShiftsWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -21,10 +30,19 @@
     <Page Update="Admin\AddEmployeeWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Admin\AddShiftWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Admin\AdminWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Admin\EmployeeWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Admin\OrdersWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Admin\ShiftsWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

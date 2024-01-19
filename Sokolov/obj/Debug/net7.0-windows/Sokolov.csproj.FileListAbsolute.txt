@@ -50,3 +50,11 @@ C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\Sokolov.c
 C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\Sokolov.sourcelink.json
 C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\Sokolov.genruntimeconfig.cache
 C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\ref\Sokolov.dll
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\AdminWindow.g.cs
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\Admin\OrdersWindow.g.cs
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\AdminWindow.baml
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\Admin\OrdersWindow.baml
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\Admin\ShiftsWindow.g.cs
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\Admin\ShiftsWindow.baml
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\Admin\AddShiftWindow.g.cs
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net7.0-windows\Admin\AddShiftWindow.baml
