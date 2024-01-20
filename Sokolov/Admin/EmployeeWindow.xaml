@@ -32,7 +32,7 @@
         </DataGrid>
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0">
             <Button Width="200" Content="Уволить выбранного сотрудника" Style="{StaticResource BtnDismissEmployee}"/>
-            <Button Content="Добавить нового сотрудника" Click="AddNewEmployee" Margin="0,20,0,15"/>
+            <Button Style="{StaticResource MainButton}" Content="Добавить нового сотрудника" Click="AddNewEmployee" Margin="0,20,0,15"/>
         </StackPanel>
     </Grid>
 </Window>

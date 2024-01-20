@@ -11,13 +11,13 @@
             <Setter Property="Width" Value="200"/>
             <Setter Property="Height" Value="25"/>
             <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="BorderBrush" Value="Green"/>
+            <Setter Property="BorderBrush" Value="Gray"/>
         </Style>
         <Style TargetType="PasswordBox">
             <Setter Property="Width" Value="200"/>
             <Setter Property="Height" Value="25"/>
             <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="BorderBrush" Value="Green"/>
+            <Setter Property="BorderBrush" Value="Gray"/>
         </Style>
         <Style TargetType="Button" x:Key="BtnLogin">
             <Setter Property="Foreground" Value="White"/>
@@ -32,7 +32,7 @@
                 </Style>
             </Style.Resources>
         </Style>
-        <Style TargetType="Button">
+        <Style TargetType="Button" x:Key="MainButton">
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="Background" Value="#20B379"/>
             <Setter Property="BorderThickness" Value="1"/>
@@ -71,20 +71,19 @@
                 </Style>
             </Style.Resources>
         </Style>
-        <Style TargetType="ComboBox" x:Key="RolesList">
+        <Style TargetType="ComboBox" BasedOn="{StaticResource {x:Type ComboBox}}" x:Key="RolesList">
             <Setter Property="Width" Value="200"/>
-            <!--<Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="ComboBox">
-                        <Border x:Name="border"
-                                Background="{TemplateBinding Background}"
-                                BorderBrush="Green"
-                                BorderThickness="1">
-                            <ContentPresenter />
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>-->
+            <Setter Property="Background" Value="White"/>
+        </Style>
+        <Style TargetType="DatePicker" x:Key="DateTime">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+        <Style TargetType="ComboBox" BasedOn="{StaticResource {x:Type ComboBox}}" x:Key="CmbTime">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="Height" Value="24"/>
         </Style>
     </Application.Resources>
 </Application>

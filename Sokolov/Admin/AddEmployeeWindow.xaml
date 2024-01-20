@@ -39,7 +39,7 @@
                 <Label Content="Роль:" Margin="0,0,28,0"/>
                 <ComboBox Style="{StaticResource RolesList}"/>
             </StackPanel>
-            <Button Content="Добавить" Width="150" MinHeight="30" Margin="20"/>
+            <Button Style="{StaticResource MainButton}" Content="Добавить" Width="150" MinHeight="30" Margin="20"/>
         </StackPanel>
     </Grid>
 </Window>
