@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sokolov"
         mc:Ignorable="d"
-        Background="LightSeaGreen"
         Width="400"
         Height="300"
+        Background="{StaticResource WindowBackground}"
         Title="Авторизация">
     <Grid>
         <!--Определение строк сетки-->

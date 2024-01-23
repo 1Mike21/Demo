@@ -1,26 +1,26 @@
-﻿<Window x:Class="Sokolov.Admin.OrdersWindow"
+﻿<Window x:Class="Sokolov.Waiter.WaiterWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Sokolov.Admin"
+        xmlns:local="clr-namespace:Sokolov.Waiter"
         mc:Ignorable="d"
         Background="{StaticResource WindowBackground}"
         SizeToContent="Width"
         Height="300"
-        Title="Управление заказами">
+        Title="Официант">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <DataGrid x:Name="OrdersGrid" AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CanUserAddRows="False">
+        <DataGrid x:Name="CurrentOrdersGrid" AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CanUserAddRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID"/>
                 <DataGridTextColumn Header="Дата"/>
@@ -30,8 +30,9 @@
                 <DataGridTextColumn Header="Количество персон"/>
             </DataGrid.Columns>
         </DataGrid>
-        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,0">
-            <Button Style="{StaticResource MainButton}" Content="Назад" FontSize="14pt" Click="BackAdminWindow" Margin="15"/>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0">
+            <Button Style="{StaticResource MainButton}" Content="Изменить статус выбранного заказа" Padding="20, 10" FontSize="14pt"/>
+            <Button Style="{StaticResource MainButton}" Content="Создать заказ" FontSize="14pt" Margin="0,15"/>
         </StackPanel>
     </Grid>
 </Window>

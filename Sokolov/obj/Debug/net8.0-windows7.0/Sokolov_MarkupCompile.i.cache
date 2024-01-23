@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Mihail\Desktop\Demo\Sokolov\obj\Debug\net8.0-windows7.0\
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\
 Sokolov
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\Mihail\Desktop\Demo\Sokolov\App.xaml
-7-1660819852
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\App.xaml
+101462196054
 
-1148643161
-198-688555687
-Admin\AddEmployeeWindow.xaml;Admin\AddShiftWindow.xaml;Admin\AdminWindow.xaml;Admin\EmployeeWindow.xaml;Admin\OrdersWindow.xaml;Admin\ShiftsWindow.xaml;MainWindow.xaml;
+141632388470
+198-294894759
+Admin\AddEmployeeWindow.xaml;Admin\AddShiftWindow.xaml;Admin\AdminWindow.xaml;Admin\EmployeeWindow.xaml;Admin\OrdersWindow.xaml;Admin\ShiftsWindow.xaml;Cook\CookWindow.xaml;MainWindow.xaml;Waiter\AddOrderWindow.xaml;Waiter\WaiterWindow.xaml;
 
 True
 

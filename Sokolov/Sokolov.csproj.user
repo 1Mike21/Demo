@@ -25,6 +25,15 @@
     <Compile Update="Admin\ShiftsWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Cook\CookWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Waiter\AddOrderWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Waiter\WaiterWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Admin\AddEmployeeWindow.xaml">
@@ -45,7 +54,16 @@
     <Page Update="Admin\ShiftsWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Cook\CookWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Waiter\AddOrderWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Waiter\WaiterWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -8,19 +8,19 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Mihail\\.nuget\\packages\\": {}
+    "C:\\Users\\Skosyrev.M.A\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mihail\\Desktop\\Demo\\Sokolov\\Sokolov.csproj",
+      "projectUniqueName": "C:\\Users\\Skosyrev.M.A\\Desktop\\Sokolov\\Sokolov\\Sokolov.csproj",
       "projectName": "Sokolov",
-      "projectPath": "C:\\Users\\Mihail\\Desktop\\Demo\\Sokolov\\Sokolov.csproj",
-      "packagesPath": "C:\\Users\\Mihail\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mihail\\Desktop\\Demo\\Sokolov\\obj\\",
+      "projectPath": "C:\\Users\\Skosyrev.M.A\\Desktop\\Sokolov\\Sokolov\\Sokolov.csproj",
+      "packagesPath": "C:\\Users\\Skosyrev.M.A\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Skosyrev.M.A\\Desktop\\Sokolov\\Sokolov\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mihail\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Skosyrev.M.A\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
