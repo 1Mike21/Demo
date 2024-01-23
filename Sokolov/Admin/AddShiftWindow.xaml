@@ -38,7 +38,7 @@
                 <Label Content="Сотрудники:" Margin="0,0,13,0"/>
                 <TextBox Height="150"/>
             </StackPanel>
-            <Button Style="{StaticResource MainButton}" Content="Создать смену" Width="150" MinHeight="30" Margin="20"/>
+            <Button Style="{StaticResource MainButton}" Content="Создать смену" Width="150" MinHeight="40" Margin="20"/>
         </StackPanel>
     </Grid>
 </Window>

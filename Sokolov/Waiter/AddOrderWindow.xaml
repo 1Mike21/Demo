@@ -39,7 +39,7 @@
                 <Label Content="Заказ:" Margin="0,0,28,0"/>
                 <TextBox Height="150"/>
             </StackPanel>
-            <Button Style="{StaticResource MainButton}" Content="Создать заказ" Width="150" MinHeight="30" Margin="20"/>
+            <Button Style="{StaticResource MainButton}" Content="Создать заказ" Width="150" MinHeight="40" Margin="20"/>
         </StackPanel>
     </Grid>
 </Window>

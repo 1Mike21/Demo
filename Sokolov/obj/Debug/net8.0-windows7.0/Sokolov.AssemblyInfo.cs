@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sokolov")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28a2c140ae35a393c89a20a5b15c6cc9bf6ee691")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12fd993bbb5e9681a2338a9f20681c46bd9eb8b1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sokolov")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sokolov")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

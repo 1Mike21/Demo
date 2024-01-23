@@ -21,7 +21,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <DataGrid x:Name="OrdersGrid" AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CanUserAddRows="False">
+        <DataGrid Style="{StaticResource Datagrid}" x:Name="OrdersGrid" AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CanUserAddRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="shift_id"/>
                 <DataGridTextColumn Header="Дата начала"/>

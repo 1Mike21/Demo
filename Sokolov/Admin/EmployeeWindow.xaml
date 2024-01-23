@@ -19,7 +19,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <DataGrid x:Name="EmployeesGrid" AutoGenerateColumns="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CanUserAddRows="False">
+        <DataGrid Style="{StaticResource Datagrid}" x:Name="EmployeesGrid" AutoGenerateColumns="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CanUserAddRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID"/>
                 <DataGridTextColumn Header="Имя"/>
@@ -30,9 +30,10 @@
                 <DataGridTextColumn Header="Пароль"/>
             </DataGrid.Columns>
         </DataGrid>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0">
-            <Button Width="200" Content="Уволить выбранного сотрудника" Style="{StaticResource BtnDismissEmployee}"/>
-            <Button Style="{StaticResource MainButton}" Content="Добавить нового сотрудника" Click="AddNewEmployee" Margin="0,20,0,15"/>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
+            <Button Content="Уволить выбранного сотрудника" Style="{StaticResource BtnDismissEmployee}" Width="350"/>
+            <Button Style="{StaticResource MainButton}" Content="Добавить нового сотрудника" Click="AddNewEmployee" Padding="10" Margin="0,20,0,15"/>
+            <Button Style="{StaticResource MainButton}" Content="Назад" Click="BackAdminWindow" Margin="0,0,0,15"/>
         </StackPanel>
     </Grid>
 </Window>

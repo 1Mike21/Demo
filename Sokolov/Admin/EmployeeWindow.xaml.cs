@@ -30,5 +30,12 @@ namespace Sokolov.Admin
             addEmployeeWindow.Show();
             this.Close();
         }
+
+        private void BackAdminWindow(object sender, RoutedEventArgs e)
+        {
+            AdminWindow adminWindow = new AdminWindow();
+            adminWindow.Show();
+            this.Close();
+        }
     }
 }
