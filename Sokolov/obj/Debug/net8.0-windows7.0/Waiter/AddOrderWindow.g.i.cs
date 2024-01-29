@@ -53,7 +53,7 @@ namespace Sokolov.Waiter {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Sokolov;V1.0.0.0;component/waiter/addorderwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Sokolov;component/waiter/addorderwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Waiter\AddOrderWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

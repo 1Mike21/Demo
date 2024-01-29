@@ -53,7 +53,7 @@ namespace Sokolov.Admin {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Sokolov;V1.0.0.0;component/admin/addemployeewindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Sokolov;component/admin/addemployeewindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Admin\AddEmployeeWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
