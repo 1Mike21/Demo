@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\App.xaml
-11571737951
+10-2093446027
 
-23-1587286399
+22-2096862652
 226-980107063
-AdminWindow.xaml;Admin\AddEmployeeWindow.xaml;Admin\AddShiftWindow.xaml;Admin\AdminWindow.xaml;Admin\EmployeeWindow.xaml;Admin\OrdersWindow.xaml;Admin\ShiftsWindow.xaml;Cook\CookWindow.xaml;MainWindow.xaml;Waiter\AddOrderWindow.xaml;Waiter\WaiterWindow.xaml;
+MainWindow.xaml;Views\Admin\AddEmployeeWindow.xaml;Views\Admin\AddShiftWindow.xaml;Views\Admin\AdminWindow.xaml;Views\Admin\EmployeeWindow.xaml;Views\Admin\OrdersWindow.xaml;Views\Admin\ShiftsWindow.xaml;Views\Cook\CookWindow.xaml;Views\Waiter\AddOrderWindow.xaml;Views\Waiter\WaiterWindow.xaml;
 
-False
+True
 

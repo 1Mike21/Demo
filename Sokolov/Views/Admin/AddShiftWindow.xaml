@@ -1,0 +1,44 @@
+﻿<Window x:Class="Sokolov.Views.Admin.AddShiftWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sokolov.Views.Admin"
+        mc:Ignorable="d"
+        Background="{StaticResource WindowBackground}"
+        SizeToContent="WidthAndHeight"
+        Title="Новая смена">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Margin="15" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Дата и время начала:" Margin="5"/>
+                <DatePicker Margin="0,0,20,0" Style="{StaticResource DateTime}" VerticalAlignment="Center"/>
+                <ComboBox Style="{StaticResource CmbTime}"/>
+                <Label Content=":" VerticalAlignment="Center" Margin="5"/>
+                <ComboBox Style="{StaticResource CmbTime}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Дата и время конца:" Margin="7"/>
+                <DatePicker Margin="0,0,20,0" Style="{StaticResource DateTime}" VerticalAlignment="Center"/>
+                <ComboBox Style="{StaticResource CmbTime}"/>
+                <Label Content=":" VerticalAlignment="Center" Margin="5"/>
+                <ComboBox Style="{StaticResource CmbTime}"/>
+            </StackPanel>
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <Label Content="Сотрудники:" Margin="0,0,13,0"/>
+                <TextBox Height="150"/>
+            </StackPanel>
+            <Button Style="{StaticResource MainButton}" Content="Создать смену" Width="150" MinHeight="40" Margin="20"/>
+        </StackPanel>
+    </Grid>
+</Window>
