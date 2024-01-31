@@ -23,5 +23,34 @@ namespace Sokolov.Views.Admin
         {
             InitializeComponent();
         }
+
+        private void ManageOrdersBtn_Click(object sender, RoutedEventArgs e)
+        {
+            OrdersWindow ordersWindow = new OrdersWindow();
+            ordersWindow.Show();
+            this.Close();
+        }
+
+        private void ManageEmployeesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            EmployeesWindow employeeWindow = new EmployeesWindow();
+            employeeWindow.Show();
+            this.Close();
+
+        }
+
+        private void ManageShiftsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ShiftsWindow shiftsWindow = new ShiftsWindow();
+            shiftsWindow.Show();
+            this.Close();
+        }
+
+        private void LogOutBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        }
     }
 }

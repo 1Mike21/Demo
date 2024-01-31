@@ -41,7 +41,7 @@
                 <PasswordBox x:Name="PasswordBox" Margin="10,0,10,0"/>
             </StackPanel>
             <!--Button для выполнения действия Войти-->
-            <Button Style="{StaticResource BtnLogin}" Content="Войти" HorizontalAlignment="Center" Margin="10"/>
+            <Button Style="{StaticResource BtnLogin}"  Content="Войти" HorizontalAlignment="Center" Margin="10" Click="LoginBtn_Click"/>
         </StackPanel>
     </Grid>
 </Window>

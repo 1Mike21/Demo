@@ -30,5 +30,12 @@ namespace Sokolov.Views.Admin
             addShiftWindow.Show();
             this.Close();
         }
+
+        private void BackAdminWindowBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AdminWindow adminWindow = new AdminWindow();
+            adminWindow.Show();
+            this.Close();
+        }
     }
 }

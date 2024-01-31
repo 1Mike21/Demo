@@ -16,7 +16,7 @@
     <Compile Update="Views\Admin\AdminWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Admin\EmployeeWindow.xaml.cs">
+    <Compile Update="Views\Admin\EmployeesWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Admin\OrdersWindow.xaml.cs">
@@ -45,7 +45,7 @@
     <Page Update="Views\Admin\AdminWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Admin\EmployeeWindow.xaml">
+    <Page Update="Views\Admin\EmployeesWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Admin\OrdersWindow.xaml">

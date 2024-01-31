@@ -161,7 +161,6 @@ C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\ref\So
 C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\Views\Admin\AddEmployeeWindow.g.cs
 C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\Views\Admin\AddShiftWindow.g.cs
 C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\Views\Admin\AdminWindow.g.cs
-C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\Views\Admin\EmployeeWindow.g.cs
 C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\Views\Admin\OrdersWindow.g.cs
 C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\Views\Admin\ShiftsWindow.g.cs
 C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\Views\Cook\CookWindow.g.cs
@@ -170,9 +169,10 @@ C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\Views\
 C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\Views\Admin\AddEmployeeWindow.baml
 C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\Views\Admin\AddShiftWindow.baml
 C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\Views\Admin\AdminWindow.baml
-C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\Views\Admin\EmployeeWindow.baml
 C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\Views\Admin\OrdersWindow.baml
 C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\Views\Admin\ShiftsWindow.baml
 C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\Views\Cook\CookWindow.baml
 C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\Views\Waiter\AddOrderWindow.baml
 C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\Views\Waiter\WaiterWindow.baml
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\Views\Admin\EmployeesWindow.g.cs
+C:\Users\Skosyrev.M.A\Desktop\Sokolov\Sokolov\obj\Debug\net8.0-windows7.0\Views\Admin\EmployeesWindow.baml
