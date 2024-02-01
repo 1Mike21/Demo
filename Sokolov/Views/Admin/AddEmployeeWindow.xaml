@@ -12,34 +12,37 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Margin="15" HorizontalAlignment="Center" VerticalAlignment="Top">
+        <StackPanel Grid.Row="2" Margin="15" HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel Margin="10" Orientation="Horizontal">
-                <Label Content="Имя:" Margin="0,0,30,0"/>
-                <TextBox/>
+                <Label Content="Имя:" Margin="0,0,50,0"/>
+                <TextBox x:Name="NameTxb"/>
             </StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal">
-                <Label Content="Логин:" Margin="0,0,20,0"/>
-                <TextBox/>
+                <Label Content="Фамилия:" Margin="0,0,10,0"/>
+                <TextBox x:Name="SurnameTxb"/>
             </StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal">
-                <Label Content="Пароль:" Margin="0,0,13,0"/>
-                <TextBox/>
+                <Label Content="Логин:" Margin="0,0,35,0"/>
+                <TextBox x:Name="LoginTxb"/>
             </StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal">
-                <Label Content="Роль:" Margin="0,0,28,0"/>
-                <ComboBox Style="{StaticResource RolesList}"/>
+                <Label Content="Пароль:" Margin="0,0,23,0"/>
+                <TextBox x:Name="PasswordTxb" />
             </StackPanel>
-            <Button Style="{StaticResource MainButton}" Content="Добавить" Width="150" MinHeight="30" Margin="20"/>
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <Label Content="Роль:" Margin="0,0,46,0"/>
+                <ComboBox x:Name="RoleCmb" DisplayMemberPath="Name" SelectedValuePath="Id"  Style="{StaticResource RolesList}"/>
+            </StackPanel>
+            <Button Style="{StaticResource MainButton}"  Content="Добавить" Width="150" MinHeight="30" Margin="20" Click="AddBtn_Click"/>
         </StackPanel>
     </Grid>
 </Window>

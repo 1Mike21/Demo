@@ -86,8 +86,9 @@
                 </Style>
             </Style.Resources>
         </Style>
-        <Style TargetType="ComboBox" BasedOn="{StaticResource {x:Type ComboBox}}" x:Key="RolesList">
+        <Style TargetType="ComboBox" x:Key="RolesList">
             <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="30"/>
             <Setter Property="Background" Value="White"/>
         </Style>
         <Style TargetType="DatePicker" x:Key="DateTime">
@@ -95,7 +96,7 @@
             <Setter Property="BorderBrush" Value="Gray"/>
             <Setter Property="BorderThickness" Value="1"/>
         </Style>
-        <Style TargetType="ComboBox" BasedOn="{StaticResource {x:Type ComboBox}}" x:Key="CmbTime">
+        <Style TargetType="ComboBox" x:Key="CmbTime">
             <Setter Property="Background" Value="White"/>
             <Setter Property="Width" Value="50"/>
             <Setter Property="Height" Value="24"/>
