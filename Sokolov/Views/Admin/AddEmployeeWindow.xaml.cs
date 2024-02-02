@@ -46,8 +46,8 @@ namespace Sokolov.Views.Admin
             string name = NameTxb.Text;
             string surname = SurnameTxb.Text;
             string login = LoginTxb.Text;
-            string password = PasswordTxb.Text;
-            string roleName = RoleCmb.DisplayMemberPath.ToString();
+            string password = PasswordTxb.Password;
+            string roleName = ((Role)RoleCmb.SelectedItem).Name.ToString();
 
             if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(surname) || string.IsNullOrWhiteSpace(login) 
                 || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(roleName))

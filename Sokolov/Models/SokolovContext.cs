@@ -31,30 +31,19 @@ public partial class SokolovContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=KP11MSSQL-S1.OUIIT.LOCAL;Database=Sokolov;Encrypt=True;TrustServerCertificate=True; Trusted_Connection=True;");
+        => optionsBuilder.UseSqlServer("Server=KP11MSSQL-S1.OUIIT.LOCAL;Database=Sokolov;Encrypt=True;TrustServerCertificate=True;Trusted_Connection=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK_Orders");
-
-            entity.ToTable("orders");
-
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CountPerson).HasColumnName("count_person");
             entity.Property(e => e.Date)
-                .IsRowVersion()
-                .IsConcurrencyToken()
+                .HasColumnType("datetime")
                 .HasColumnName("date");
-            entity.Property(e => e.Place)
-                .IsUnicode(false)
-                .HasColumnName("place");
-            entity.Property(e => e.Status)
-                .IsUnicode(false)
-                .HasColumnName("status");
+            entity.Property(e => e.Place).HasColumnName("place");
+            entity.Property(e => e.Status).HasColumnName("status");
             entity.Property(e => e.UserId).HasColumnName("user_id");
 
             entity.HasOne(d => d.User).WithMany(p => p.Orders)
@@ -65,13 +54,9 @@ public partial class SokolovContext : DbContext
 
         modelBuilder.Entity<OrderProduct>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK_Order_products");
+            entity.ToTable("Order_products");
 
-            entity.ToTable("order_products");
-
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.OrderId).HasColumnName("order_id");
             entity.Property(e => e.ProductId).HasColumnName("product_id");
 
@@ -88,63 +73,35 @@ public partial class SokolovContext : DbContext
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK_Products");
-
-            entity.ToTable("products");
-
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Count).HasColumnName("count");
             entity.Property(e => e.Price).HasColumnName("price");
-            entity.Property(e => e.Title)
-                .IsUnicode(false)
-                .HasColumnName("title");
+            entity.Property(e => e.Title).HasColumnName("title");
         });
 
         modelBuilder.Entity<Role>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK_Roles");
-
-            entity.ToTable("roles");
-
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
-            entity.Property(e => e.Name)
-                .IsUnicode(false)
-                .HasColumnName("name");
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Name).HasColumnName("name");
         });
 
         modelBuilder.Entity<Shift>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK_Shifts");
-
-            entity.ToTable("shifts");
-
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.EndShift)
                 .HasColumnType("datetime")
                 .HasColumnName("end_shift");
             entity.Property(e => e.StartShift)
                 .HasColumnType("datetime")
                 .HasColumnName("start_shift");
-            entity.Property(e => e.StatusShift)
-                .IsUnicode(false)
-                .HasColumnName("status_shift");
+            entity.Property(e => e.StatusShift).HasColumnName("status_shift");
         });
 
         modelBuilder.Entity<ShiftUser>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK_Shift_users");
+            entity.ToTable("Shift_users");
 
-            entity.ToTable("shift_users");
-
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.ShiftId).HasColumnName("shift_id");
             entity.Property(e => e.UserId).HasColumnName("user_id");
 
@@ -161,30 +118,15 @@ public partial class SokolovContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK_Users");
-
-            entity.ToTable("users");
-
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Login)
                 .HasMaxLength(50)
-                .IsUnicode(false)
                 .HasColumnName("login");
-            entity.Property(e => e.Name)
-                .IsUnicode(false)
-                .HasColumnName("name");
-            entity.Property(e => e.Password)
-                .IsUnicode(false)
-                .HasColumnName("password");
+            entity.Property(e => e.Name).HasColumnName("name");
+            entity.Property(e => e.Password).HasColumnName("password");
             entity.Property(e => e.RoleId).HasColumnName("role_id");
-            entity.Property(e => e.Status)
-                .IsUnicode(false)
-                .HasColumnName("status");
-            entity.Property(e => e.Surname)
-                .IsUnicode(false)
-                .HasColumnName("surname");
+            entity.Property(e => e.Status).HasColumnName("status");
+            entity.Property(e => e.Surname).HasColumnName("surname");
 
             entity.HasOne(d => d.Role).WithMany(p => p.Users)
                 .HasForeignKey(d => d.RoleId)

@@ -61,7 +61,7 @@ namespace Sokolov.Admin {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Sokolov;component/admin/shiftswindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Sokolov;V1.0.0.0;component/admin/shiftswindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Admin\ShiftsWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

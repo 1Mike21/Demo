@@ -36,7 +36,7 @@
             </StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal">
                 <Label Content="Пароль:" Margin="0,0,23,0"/>
-                <TextBox x:Name="PasswordTxb" />
+                <PasswordBox x:Name="PasswordTxb" />
             </StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal">
                 <Label Content="Роль:" Margin="0,0,46,0"/>

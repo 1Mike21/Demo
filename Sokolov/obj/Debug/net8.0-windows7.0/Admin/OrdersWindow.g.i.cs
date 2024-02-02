@@ -61,7 +61,7 @@ namespace Sokolov.Admin {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Sokolov;component/admin/orderswindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Sokolov;V1.0.0.0;component/admin/orderswindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Admin\OrdersWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
