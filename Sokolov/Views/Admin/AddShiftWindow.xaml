@@ -23,12 +23,12 @@
             <StackPanel Orientation="Horizontal">
                 <Label Content="Дата и время начала:" Margin="5"/>
                 <DatePicker Margin="0,0,20,0" Style="{StaticResource DateTime}" VerticalAlignment="Center"/>
-                <ComboBox Style="{StaticResource CmbTime}"/>
+                <ComboBox Style="{StaticResource CmbTime}"></ComboBox>
                 <Label Content=":" VerticalAlignment="Center" Margin="5"/>
                 <ComboBox Style="{StaticResource CmbTime}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Label Content="Дата и время конца:" Margin="7"/>
+                <Label Content="Дата и время конца:" Margin="9"/>
                 <DatePicker Margin="0,0,20,0" Style="{StaticResource DateTime}" VerticalAlignment="Center"/>
                 <ComboBox Style="{StaticResource CmbTime}"/>
                 <Label Content=":" VerticalAlignment="Center" Margin="5"/>

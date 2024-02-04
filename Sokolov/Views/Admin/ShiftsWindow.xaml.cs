@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sokolov.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Sokolov.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Sokolov.Views.Admin
 {
@@ -19,9 +22,21 @@ namespace Sokolov.Views.Admin
     /// </summary>
     public partial class ShiftsWindow : Window
     {
+        private readonly SokolovContext _context;
+
         public ShiftsWindow()
         {
             InitializeComponent();
+            _context = new SokolovContext();
+            LoadShiftsAsync();
+        }
+
+        public List <Shift> Shifts { get; set;} = new List<Shift>();
+        
+        private async void LoadShiftsAsync()
+        {
+            Shifts = await _context.Shifts.Include(s => s.ShiftUsers).ThenInclude(s => s.User).ToListAsync();
+            ShiftsGrid.ItemsSource = Shifts;
         }
 
         private void AddNewShift(object sender, RoutedEventArgs e)

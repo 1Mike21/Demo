@@ -32,7 +32,7 @@
                 <!--Label для отображения текста Логин-->
                 <Label Content="Логин:" Margin="10"/>
                 <!--TextBox для ввода логина-->
-                <TextBox x:Name="UsernameTextBox" Margin="18,0,10,0"/>
+                <TextBox x:Name="UsernameTextBox" Margin="22,0,10,0"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <!--Label для отображения текста Пароль:-->
