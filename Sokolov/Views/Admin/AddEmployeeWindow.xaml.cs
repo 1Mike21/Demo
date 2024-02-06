@@ -79,9 +79,6 @@ namespace Sokolov.Views.Admin
             EmployeeAdded?.Invoke(this, EventArgs.Empty);
             MessageBox.Show("Новый сотрудник успешно добавлен");
             this.Close();
-
-            EmployeesWindow employeesWindow = new EmployeesWindow();
-            employeesWindow.Show();
         }
     }
 }

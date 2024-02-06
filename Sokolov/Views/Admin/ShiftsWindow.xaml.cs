@@ -23,6 +23,7 @@ namespace Sokolov.Views.Admin
     public partial class ShiftsWindow : Window
     {
         private readonly SokolovContext _context;
+        private AddShiftWindow _addShiftWindow;
 
         public ShiftsWindow()
         {
@@ -33,17 +34,17 @@ namespace Sokolov.Views.Admin
 
         public List <Shift> Shifts { get; set;} = new List<Shift>();
         
-        private async void LoadShiftsAsync()
+        private async Task LoadShiftsAsync()
         {
-            Shifts = await _context.Shifts.Include(s => s.ShiftUsers).ThenInclude(s => s.User).ToListAsync();
-            ShiftsGrid.ItemsSource = Shifts;
-        }
-
-        private void AddNewShift(object sender, RoutedEventArgs e)
-        {
-            AddShiftWindow addShiftWindow = new AddShiftWindow();
-            addShiftWindow.Show();
-            this.Close();
+            try
+            {
+                var shifts = await _context.Shifts.Include(s => s.ShiftUsers).ThenInclude(s => s.User).OrderByDescending(s => s.StartShift).ToListAsync();
+                ShiftsGrid.ItemsSource = shifts;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void BackAdminWindowBtn_Click(object sender, RoutedEventArgs e)
@@ -51,6 +52,24 @@ namespace Sokolov.Views.Admin
             AdminWindow adminWindow = new AdminWindow();
             adminWindow.Show();
             this.Close();
+        }
+
+        private void AddNewShiftBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (_addShiftWindow == null || !_addShiftWindow.IsVisible)
+            {
+                _addShiftWindow = new AddShiftWindow();
+                _addShiftWindow.Closed += async (e, args) =>
+                {
+                    _addShiftWindow = null;
+                    await LoadShiftsAsync();
+                };
+                _addShiftWindow.Show();
+            }
+            else
+            {
+                _addShiftWindow.Activate();
+            }
         }
     }
 }

@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Sokolov.Views.Admin"
         mc:Ignorable="d"
         Background="{StaticResource WindowBackground}"
+        WindowState="Maximized"
         Height="300"
         Title="Управление сменами"
         >
@@ -49,7 +50,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,2,0,0">
-            <Button Style="{StaticResource MainButton}" Content="Создать новую смену" MinWidth="250" Height="50" FontSize="14pt" Click="AddNewShift" Margin="15"/>
+            <Button Style="{StaticResource MainButton}" Content="Создать новую смену" MinWidth="250" Height="50" FontSize="14pt" Click="AddNewShiftBtn_Click" Margin="15"/>
             <Button Style="{StaticResource MainButton}" Content="Назад" FontSize="14pt" Click ="BackAdminWindowBtn_Click" Margin="15"/>
         </StackPanel>
     </Grid>

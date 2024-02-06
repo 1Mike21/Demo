@@ -24,6 +24,7 @@ namespace Sokolov.Views.Admin
     {
         private readonly SokolovContext _context;
         private ObservableCollection<User> _employees;
+        private AddEmployeeWindow _addEmployeeWindow;
 
         public EmployeesWindow()
         {
@@ -33,14 +34,21 @@ namespace Sokolov.Views.Admin
             LoadEmployees();
         }
 
-        private void LoadEmployees()
+        public List <User> Users { get; set; } = new List<User>();
+
+        private async Task LoadEmployees()
         {
-            _employees = new ObservableCollection<User>(_context.Users.Include(u => u.Role).Where(u => u.Status == "Active").ToList());
-            EmployeesGrid.ItemsSource = _employees;
+            try
+            {
+                _employees = new ObservableCollection<User>(_context.Users.Include(u => u.Role).Where(u => u.Status == "Active").ToList());
+                EmployeesGrid.ItemsSource = _employees;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         
-
-
         private void DismissEmployeeBtn_Click(object sender, RoutedEventArgs e)
         {
             if (EmployeesGrid.SelectedItem != null)
@@ -66,9 +74,19 @@ namespace Sokolov.Views.Admin
 
         private void AddEmployeeBtn_Click(object sender, RoutedEventArgs e)
         {
-            AddEmployeeWindow addEmployeeWindow = new AddEmployeeWindow();
-            addEmployeeWindow.Show();
-            this.Close();
+            if (_addEmployeeWindow == null || !_addEmployeeWindow.IsVisible){
+                _addEmployeeWindow = new AddEmployeeWindow();
+                _addEmployeeWindow.Closed += async (e, args) =>
+                {
+                    _addEmployeeWindow = null;
+                    await LoadEmployees();
+                };
+                _addEmployeeWindow.Show();
+            }
+            else
+            {
+                _addEmployeeWindow.Activate();
+            }
         }
         private void BackAdminWindowBtn_Click(object sender, RoutedEventArgs e)
         {
