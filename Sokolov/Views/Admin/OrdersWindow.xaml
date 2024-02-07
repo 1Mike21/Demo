@@ -43,7 +43,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,0">
-            <Button Style="{StaticResource MainButton}" Content="Назад" FontSize="14pt" Click="BackAdminWindowBtn_Click" Margin="15"/>
+            <Button Name="backBtn" Style="{StaticResource MainButton}" Content="Назад" FontSize="14pt" Margin="15"/>
         </StackPanel>
     </Grid>
 </Window>

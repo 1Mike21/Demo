@@ -20,8 +20,8 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Margin="50" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Style="{StaticResource MainButton}" Content="Управление заказами" Margin="0,0,0,20" Click="ManageOrdersBtn_Click"/>
             <Button Style="{StaticResource MainButton}" Content="Управление сотрудниками" Margin="0,0,0,20" Click="ManageEmployeesBtn_Click"/>
+            <Button Style="{StaticResource MainButton}" Content="Управление заказами" Margin="0,0,0,20" Click="ManageOrdersBtn_Click"/>
             <Button Style="{StaticResource MainButton}" Content="Управление сменами" Margin="0,0,0,20" Click="ManageShiftsBtn_Click"/>
             <Button Style="{StaticResource BtnLogout}" Content="Выйти" Width="300" Click="LogOutBtn_Click"/>
         </StackPanel>

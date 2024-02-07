@@ -23,8 +23,6 @@ namespace Sokolov.Views.Admin
     public partial class EmployeesWindow : Window
     {
         private readonly SokolovContext _context;
-        private ObservableCollection<User> _employees;
-        private AddEmployeeWindow _addEmployeeWindow;
 
         public EmployeesWindow()
         {
@@ -34,14 +32,12 @@ namespace Sokolov.Views.Admin
             LoadEmployees();
         }
 
-        public List <User> Users { get; set; } = new List<User>();
-
-        private async Task LoadEmployees()
+        private void LoadEmployees()
         {
             try
             {
-                _employees = new ObservableCollection<User>(_context.Users.Include(u => u.Role).Where(u => u.Status == "Active").ToList());
-                EmployeesGrid.ItemsSource = _employees;
+                var employees = _context.Users.Include(u => u.Role).Where(u => u.Status == "Active").ToList();
+                EmployeesGrid.ItemsSource = employees;
             }
             catch (Exception ex)
             {
@@ -51,20 +47,13 @@ namespace Sokolov.Views.Admin
         
         private void DismissEmployeeBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (EmployeesGrid.SelectedItem != null)
-            {
-                var selectedEmployee = EmployeesGrid.SelectedItem as User;
+           var selectedEmployee = EmployeesGrid.SelectedItem as User;
 
-                using (var context = new SokolovContext())
-                {
-                    var employeeToUpdate = context.Users.FirstOrDefault(u => u.Id == selectedEmployee.Id);
-                    if (employeeToUpdate != null)
-                    {
-                        employeeToUpdate.Status = "Inactive";
-                        context.SaveChanges();
-                        _employees.Remove(selectedEmployee);
-                    }
-                }
+            if (selectedEmployee != null)
+            {
+                    selectedEmployee.Status = "Inactive";
+                    _context.SaveChanges();
+                    EmployeesGrid.Items.Remove(selectedEmployee);
             }
             else
             {
@@ -74,25 +63,15 @@ namespace Sokolov.Views.Admin
 
         private void AddEmployeeBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (_addEmployeeWindow == null || !_addEmployeeWindow.IsVisible){
-                _addEmployeeWindow = new AddEmployeeWindow();
-                _addEmployeeWindow.Closed += async (e, args) =>
-                {
-                    _addEmployeeWindow = null;
-                    await LoadEmployees();
-                };
-                _addEmployeeWindow.Show();
-            }
-            else
-            {
-                _addEmployeeWindow.Activate();
-            }
+            var addEmployeeWindow = new AddEmployeeWindow();
+            addEmployeeWindow.ShowDialog();
+            LoadEmployees();
         }
         private void BackAdminWindowBtn_Click(object sender, RoutedEventArgs e)
         {
             AdminWindow adminWindow = new AdminWindow();
-            adminWindow.Show();
             this.Close();
+            adminWindow.Show();
 
         }
     }

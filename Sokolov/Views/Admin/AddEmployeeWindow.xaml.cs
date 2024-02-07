@@ -25,9 +25,6 @@ namespace Sokolov.Views.Admin
         private readonly SokolovContext _context;
         public event EventHandler EmployeeAdded;
 
-        private ObservableCollection<Role> _roles;
-
-
         public AddEmployeeWindow()
         {
             InitializeComponent();
@@ -37,48 +34,56 @@ namespace Sokolov.Views.Admin
 
         private void LoadRoles()
         {
-            _roles = new ObservableCollection<Role>(_context.Roles.ToList());
-            RoleCmb.ItemsSource = _roles;
+            try
+            {
+                RoleCmb.ItemsSource = _context.Roles.ToList();
+                RoleCmb.DisplayMemberPath = "Name";
+
+            }
+            catch (Exception ex) 
+            { 
+                MessageBox.Show("Ошибка при загрузке ролей: " + ex.Message);
+            }
         }
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
-            string name = NameTxb.Text;
-            string surname = SurnameTxb.Text;
-            string login = LoginTxb.Text;
-            string password = PasswordTxb.Password;
-            string roleName = ((Role)RoleCmb.SelectedItem).Name.ToString();
-
-            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(surname) || string.IsNullOrWhiteSpace(login) 
-                || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(roleName))
+            try
             {
-                MessageBox.Show("Заполните все поля.");
-                return;
+                string name = NameTxb.Text;
+                string surname = SurnameTxb.Text;
+                string login = LoginTxb.Text;
+                string password = PasswordTxb.Password;
+                Role selectedRole = RoleCmb.SelectedItem as Role;
+
+                if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(surname) || string.IsNullOrWhiteSpace(login) 
+                    || string.IsNullOrWhiteSpace(password) || selectedRole == null)
+                {
+                    MessageBox.Show("Заполните все поля.");
+                    return;
+                }
+
+                User newUser = new User
+                {
+                    Name = name,
+                    Surname = surname,
+                    Login = login.ToLower(),
+                    Password = password,
+                    RoleId = selectedRole.Id,
+                    Status = "Active",
+                };
+
+                _context.Users.Add(newUser);
+                _context.SaveChanges();
+
+                EmployeeAdded?.Invoke(this, EventArgs.Empty);
+                MessageBox.Show("Новый сотрудник успешно добавлен");
+                this.Close();
             }
-
-            Role role = _context.Roles.FirstOrDefault(r => r.Name == roleName);
-            if (role == null)
+            catch (Exception ex)
             {
-                MessageBox.Show("Выбранная роль не найдена.");
-                return;
+                MessageBox.Show("Возникла ошибка: " + ex.Message);
             }
-
-            User newUser = new User
-            {
-                Name = name,
-                Surname = surname,
-                Login = login.ToLower(),
-                Password = password,
-                RoleId = role.Id,
-                Status = "Active",
-            };
-
-            _context.Users.Add(newUser);
-            _context.SaveChanges();
-
-            EmployeeAdded?.Invoke(this, EventArgs.Empty);
-            MessageBox.Show("Новый сотрудник успешно добавлен");
-            this.Close();
         }
     }
 }

@@ -21,6 +21,7 @@ namespace Sokolov.Views.Admin
     /// Interaction logic for ShiftsWindow.xaml
     /// </summary>
     public partial class ShiftsWindow : Window
+
     {
         private readonly SokolovContext _context;
         private AddShiftWindow _addShiftWindow;
@@ -30,6 +31,12 @@ namespace Sokolov.Views.Admin
             InitializeComponent();
             _context = new SokolovContext();
             LoadShiftsAsync();
+
+            backBtn.Click += (sender, e) =>
+            {
+                new AdminWindow().Show();
+                Close();
+            };
         }
 
         public List <Shift> Shifts { get; set;} = new List<Shift>();
@@ -38,7 +45,7 @@ namespace Sokolov.Views.Admin
         {
             try
             {
-                var shifts = await _context.Shifts.Include(s => s.ShiftUsers).ThenInclude(s => s.User).OrderByDescending(s => s.StartShift).ToListAsync();
+                var shifts = await _context.Shifts.Include(s => s.ShiftUsers).ThenInclude(su => su.User).OrderByDescending(s => s.StartShift).ToListAsync();
                 ShiftsGrid.ItemsSource = shifts;
             }
             catch (Exception ex)
@@ -47,14 +54,7 @@ namespace Sokolov.Views.Admin
             }
         }
 
-        private void BackAdminWindowBtn_Click(object sender, RoutedEventArgs e)
-        {
-            AdminWindow adminWindow = new AdminWindow();
-            adminWindow.Show();
-            this.Close();
-        }
-
-        private void AddNewShiftBtn_Click(object sender, RoutedEventArgs e)
+        private async void AddNewShiftBtn_Click(object sender, RoutedEventArgs e)
         {
             if (_addShiftWindow == null || !_addShiftWindow.IsVisible)
             {

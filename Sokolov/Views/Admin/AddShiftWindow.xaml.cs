@@ -1,4 +1,5 @@
-﻿using Sokolov.Models;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+using Sokolov.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,11 +31,26 @@ namespace Sokolov.Views.Admin
 
             var employees = _context.Users.ToList();
             EmployeesListBox.ItemsSource = employees;
+            HourCmb(StartHourCmb);
+            HourCmb(EndHourCmb);
+            MinuteCmb(StartMinuteCmb);
+            MinuteCmb(EndMinuteCmb);
         }
 
-        private void HourCmb()
+        private void HourCmb(ComboBox combobox)
         {
-            
+            for (int i = 0; i <= 24; i++)
+            {
+                combobox.Items.Add(new ComboBoxItem { Content = i.ToString() });
+            }
+        }
+
+        private void MinuteCmb(ComboBox combobox)
+        {
+            for (int i = 0; i <= 60; i++)
+            {
+                combobox.Items.Add(new ComboBoxItem { Content = i.ToString() });
+            }
         }
 
         private async void CreateShiftBtn_Click(object sender, RoutedEventArgs e)

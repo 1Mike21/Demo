@@ -29,6 +29,12 @@ namespace Sokolov.Views.Admin
             InitializeComponent();
             _context = new SokolovContext();
             LoadOrdersAsync();
+            backBtn.Click += (sender, e) =>
+            {
+                AdminWindow adminWindow = new AdminWindow();
+                adminWindow.Show();
+                this.Close();
+            };
         }
 
         public List<Order> Orders { get; set; } = new List<Order>();
@@ -37,14 +43,6 @@ namespace Sokolov.Views.Admin
         {
             Orders = await _context.Orders.Include(o => o.User).Include(o => o.OrderProducts).ThenInclude(op => op.Product).ToListAsync();
             OrdersGrid.ItemsSource = Orders;
-        }
-
-        private void BackAdminWindowBtn_Click(object sender, RoutedEventArgs e)
-        {
-            AdminWindow adminWindow = new AdminWindow();
-            adminWindow.Show();
-            this.Close();
-
         }
     }
 }

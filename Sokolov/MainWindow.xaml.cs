@@ -42,21 +42,15 @@ namespace Sokolov
                     switch (user.Role.Name)
                     {
                         case "Администратор":
-                            Views.Admin.AdminWindow adminWindow = new Views.Admin.AdminWindow();
-                            adminWindow.Show();
-                            this.Close();
+                            NavigateToWindow(new Views.Admin.AdminWindow());
                             break;
 
                         case "Повар":
-                            Views.Cook.CookWindow cookWindow = new Views.Cook.CookWindow();
-                            cookWindow.Show();
-                            this.Close();
+                            NavigateToWindow(new Views.Cook.CookWindow());
                             break;
 
                         case "Официант":
-                            Views.Waiter.WaiterWindow waiterWindow = new Views.Waiter.WaiterWindow();
-                            waiterWindow.Show();
-                            this.Close();
+                            NavigateToWindow(new Views.Waiter.WaiterWindow());
                             break;
 
                         default:
@@ -69,6 +63,12 @@ namespace Sokolov
                     MessageBox.Show("Неверный логин или пароль");
                 }
             }
+        }
+
+        private void NavigateToWindow(Window window)
+        {
+            window.Show();
+            Close();
         }
     }
 }

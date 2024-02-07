@@ -23,7 +23,6 @@
 
         <DataGrid Style="{StaticResource Datagrid}" x:Name="ShiftsGrid" AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CanUserAddRows="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="shift_id" Binding="{Binding Id}" Width="*"/>
                 <DataGridTextColumn Header="Дата начала" Binding="{Binding StartShift, StringFormat={}{0:dd.MM.yy HH:mm}}" Width="*"/>
                 <DataGridTextColumn Header="Дата окончания" Binding="{Binding EndShift, StringFormat={}{0:dd.MM.yy HH:mm}}" Width="*"/>
                 <DataGridTextColumn Header="Статус" Binding="{Binding StatusShift}" Width="*"/>
@@ -51,7 +50,7 @@
         </DataGrid>
         <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,2,0,0">
             <Button Style="{StaticResource MainButton}" Content="Создать новую смену" MinWidth="250" Height="50" FontSize="14pt" Click="AddNewShiftBtn_Click" Margin="15"/>
-            <Button Style="{StaticResource MainButton}" Content="Назад" FontSize="14pt" Click ="BackAdminWindowBtn_Click" Margin="15"/>
+            <Button Name="backBtn" Style="{StaticResource MainButton}" Content="Назад" FontSize="14pt" Margin="15"/>
         </StackPanel>
     </Grid>
 </Window>

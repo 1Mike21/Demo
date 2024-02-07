@@ -23,37 +23,12 @@
             <StackPanel Orientation="Horizontal">
                 <Label Content="Дата и время начала:" Margin="5"/>
                 <DatePicker Name="StartDatePicker" Margin="0,0,20,0" Style="{StaticResource DateTime}" VerticalAlignment="Center"/>
-                <ComboBox Name="StartHourCmb" Style="{StaticResource CmbTime}">
-                    <ComboBoxItem>1</ComboBoxItem>
-                    <ComboBoxItem>2</ComboBoxItem>
-                    <ComboBoxItem>3</ComboBoxItem>
-                    <ComboBoxItem>4</ComboBoxItem>
-                    <ComboBoxItem>5</ComboBoxItem>
-                    <ComboBoxItem>6</ComboBoxItem>
-                    <ComboBoxItem>7</ComboBoxItem>
-                    <ComboBoxItem>8</ComboBoxItem>
-                    <ComboBoxItem>9</ComboBoxItem>
-                    <ComboBoxItem>10</ComboBoxItem>
-                    <ComboBoxItem>11</ComboBoxItem>
-                    <ComboBoxItem>12</ComboBoxItem>
-                    <ComboBoxItem>13</ComboBoxItem>
-                    <ComboBoxItem>14</ComboBoxItem>
-                    <ComboBoxItem>15</ComboBoxItem>
-                    <ComboBoxItem>16</ComboBoxItem>
-                    <ComboBoxItem>17</ComboBoxItem>
-                    <ComboBoxItem>18</ComboBoxItem>
-                    <ComboBoxItem>19</ComboBoxItem>
-                    <ComboBoxItem>20</ComboBoxItem>
-                    <ComboBoxItem>21</ComboBoxItem>
-                    <ComboBoxItem>22</ComboBoxItem>
-                    <ComboBoxItem>23</ComboBoxItem>
-                    <ComboBoxItem>24</ComboBoxItem>
-                </ComboBox>
+                <ComboBox Name="StartHourCmb" Style="{StaticResource CmbTime}"></ComboBox>
                 <Label Content=":" VerticalAlignment="Center" Margin="5"/>
                 <ComboBox Name="StartMinuteCmb" Style="{StaticResource CmbTime}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Label Content="Дата и время конца:" Margin="9"/>
+                <Label Content="Дата и время конца:" Margin="5,0,13,0"/>
                 <DatePicker Name="EndDatePicker" Margin="0,0,20,0" Style="{StaticResource DateTime}" VerticalAlignment="Center"/>
                 <ComboBox Name="EndHourCmb" Style="{StaticResource CmbTime}"/>
                 <Label Content=":" VerticalAlignment="Center" Margin="5"/>
@@ -61,7 +36,7 @@
             </StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal">
                 <Label Content="Сотрудники:" Margin="0,0,13,0"/>
-                <ListBox Name="EmployeesListBox" SelectionMode="Multiple" Width="200" Height="150"/>
+                <ListBox Name="EmployeesListBox" DisplayMemberPath="Surname" SelectionMode="Multiple" Width="200" Height="150"/>
             </StackPanel>
             <Button Style="{StaticResource MainButton}" Content="Создать смену" Width="150" MinHeight="40" Margin="20" Click="CreateShiftBtn_Click"/>
         </StackPanel>
