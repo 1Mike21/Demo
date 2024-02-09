@@ -12,34 +12,30 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Margin="15" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <StackPanel Margin="10" Orientation="Horizontal">
-                <Label Content="Клиент:" Margin="0,0,15,0"/>
-                <TextBox/>
-            </StackPanel>
+        <StackPanel Grid.Row="2" Margin="15" HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel Margin="10" Orientation="Horizontal">
                 <Label Content="Столик:" Margin="0,0,20,0"/>
-                <TextBox/>
+                <TextBox Name="PlaceTxb"/>
             </StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal">
                 <Label Content="Количество персон:" Margin="0,0,13,0"/>
-                <TextBox/>
+                <TextBox Name="CountPersonTxb"/>
             </StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal">
-                <Label Content="Заказ:" Margin="0,0,28,0"/>
-                <TextBox Height="150"/>
+                <Label Content="Блюда и напитки:" Margin="0,0,28,0"/>
+                <ListBox Name="ProductsListBox" DisplayMemberPath="Title" SelectionMode="Multiple" Width="200" Height="150"/>
             </StackPanel>
-            <Button Style="{StaticResource MainButton}" Content="Создать заказ" Width="150" MinHeight="40" Margin="20"/>
+            <Button Style="{StaticResource MainButton}" Content="Создать заказ" Width="150" MinHeight="40" Margin="20" Click="CreateOrderBtn_Click"/>
+            <Button Name="BackBtn" Style="{StaticResource MainButton}" Content="Назад" Width="150" MinHeight="40"/>
         </StackPanel>
     </Grid>
 </Window>

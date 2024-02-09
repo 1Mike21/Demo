@@ -51,7 +51,7 @@
         </DataGrid>
         <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,1,0,0">
             <Button Style="{StaticResource MainButton}" Content="Изменить статус выбранного заказа" Padding="20, 10" Margin="10" Click="ChangeStatusBtn_Click"/>
-            <Button Style="{StaticResource BtnLogout}" Content="Выйти" Width="350" Margin="0,0,0,15"/>
+            <Button Style="{StaticResource BtnLogout}" Name="LogoutBtn" Content="Выйти" Width="350" Margin="0,0,0,15"/>
         </StackPanel>
     </Grid>
 </Window>
