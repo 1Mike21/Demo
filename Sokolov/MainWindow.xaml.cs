@@ -50,7 +50,7 @@ namespace Sokolov
                             break;
 
                         case "Официант":
-                            NavigateToWindow(new Views.Waiter.WaiterWindow());
+                            NavigateToWindow(new Views.Waiter.WaiterWindow(user.Id));
                             break;
 
                         default:

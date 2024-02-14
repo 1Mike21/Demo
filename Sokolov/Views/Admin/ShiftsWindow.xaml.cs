@@ -37,8 +37,6 @@ namespace Sokolov.Views.Admin
                 Close();
             };
         }
-
-        public List <Shift> Shifts { get; set;} = new List<Shift>();
         
         private async Task LoadShiftsAsync()
         {

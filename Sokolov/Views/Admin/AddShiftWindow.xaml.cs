@@ -69,6 +69,12 @@ namespace Sokolov.Views.Admin
                     TimeSpan.FromMinutes(int.Parse(((ComboBoxItem)EndMinuteCmb.SelectedItem).Content.ToString()));
                 var endShiftDateTime = endShiftDate.Add(endShiftTime);
 
+                if (selectedEmployees.Count == 0)
+                {
+                    MessageBox.Show("Выберите сотрудников");
+                    return;
+                }
+
                 var newShift = new Shift
                 {
                     StartShift = startShiftDateTime,

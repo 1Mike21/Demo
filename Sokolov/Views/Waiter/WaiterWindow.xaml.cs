@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using Sokolov.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,45 @@ namespace Sokolov.Views.Waiter
     /// </summary>
     public partial class WaiterWindow : Window
     {
-        public WaiterWindow()
+        private readonly SokolovContext _context;
+        private Int32 user;
+
+        public WaiterWindow(Int32 currentUser = 1)
         {
             InitializeComponent();
+            _context = new SokolovContext();
+            this.user = currentUser;
+
+            LoadOrdersAsync();
+
+            CreateOrderBtn.Click += (sender, e) =>
+            {
+                AddOrderWindow addOrderWindow = new AddOrderWindow(this.user);
+                addOrderWindow.Show();
+                this.Close();
+            };
+        }
+
+        private async void LoadOrdersAsync()
+        {
+            var orders = await _context.Orders.Include(o => o.User).Include(o => o.OrderProducts).ThenInclude(o => o.Product).ToListAsync();
+            CurrentOrdersGrid.ItemsSource = orders;
+        }
+
+        private void ChangeOrderStatusBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedOrder = CurrentOrdersGrid.SelectedItem as Order;
+            if (selectedOrder != null && selectedOrder.Status == "Готов")
+            {
+                selectedOrder.Status = "Оплачен";
+                _context.SaveChanges();
+                MessageBox.Show("Статус заказа успешно сменен", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                LoadOrdersAsync();
+            }
+            else
+            {
+                MessageBox.Show("Выберите заказ для смены статуса!", "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
     }
 }

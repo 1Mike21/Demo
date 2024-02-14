@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Sokolov.Views.Waiter"
         mc:Ignorable="d"
         Background="{StaticResource WindowBackground}"
-        SizeToContent="Width"
+        WindowState="Maximized"
         Height="300"
         Title="Официант">
     <Grid>
@@ -22,17 +22,36 @@
 
         <DataGrid Style="{StaticResource Datagrid}" x:Name="CurrentOrdersGrid" AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CanUserAddRows="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID"/>
-                <DataGridTextColumn Header="Дата"/>
-                <DataGridTextColumn Header="Статус"/>
-                <DataGridTextColumn Header="Клиент"/>
-                <DataGridTextColumn Header="Номер столика"/>
-                <DataGridTextColumn Header="Количество персон"/>
+                <DataGridTextColumn Header="Дата" Binding="{Binding Date, StringFormat={}{0:dd.MM.yy HH:mm}}" Width="*"/>
+                <DataGridTextColumn Header="Статус" Binding="{Binding Status}" Width="*"/>
+                <DataGridTextColumn Header="Клиент" Width="*">
+                    <DataGridTextColumn.Binding>
+                        <MultiBinding StringFormat="{}{0} {1}">
+                            <Binding Path="User.Name"/>
+                            <Binding Path="User.Surname"/>
+                        </MultiBinding>
+                    </DataGridTextColumn.Binding>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Номер столика" Binding="{Binding Place}" Width="*"/>
+                <DataGridTextColumn Header="Количество персон" Binding="{Binding CountPerson}" Width="*"/>
+                <DataGridTemplateColumn Header="Продукты" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ItemsControl ItemsSource="{Binding OrderProducts}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Product.Title}"/>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
-            <Button Style="{StaticResource MainButton}" Content="Изменить статус выбранного заказа" Padding="20, 10"/>
-            <Button Style="{StaticResource MainButton}" Content="Создать заказ" Margin="0,15"/>
+            <Button Style="{StaticResource MainButton}" Click="ChangeOrderStatusBtn_Click" Content="Изменить статус выбранного заказа" Padding="20, 10"/>
+            <Button Name="CreateOrderBtn" Style="{StaticResource MainButton}" Content="Создать заказ" Margin="0,15"/>
             <Button Style="{StaticResource BtnLogout}" Content="Выйти" Width="400" Margin="0,0,0,15"/>
         </StackPanel>
     </Grid>

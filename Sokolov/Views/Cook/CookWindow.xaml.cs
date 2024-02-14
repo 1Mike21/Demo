@@ -28,22 +28,41 @@ namespace Sokolov.Views.Cook
             InitializeComponent();
             _context = new SokolovContext();
             LoadOrdersAsync();
-        }
 
-        public List<Order> Orders { get; set; } = new List<Order>();
+            LogoutBtn.Click += (sender, e) =>
+            {
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+                this.Close();
+            };
+        }
 
         private async void LoadOrdersAsync()
         {
-            Orders = await _context.Orders.Include(o => o.User).Include(o => o.OrderProducts).ThenInclude(op => op.Product).Where(o => o.Status == "Accept").ToListAsync();
-            CurrentOrdersGrid.ItemsSource = Orders;
+            var orders = await _context.Orders.Include(o => o.User).Include(o => o.OrderProducts).ThenInclude(op => op.Product).Where(o => o.Status == "Принят" || o.Status == "Готовится").ToListAsync();
+            CurrentOrdersGrid.ItemsSource = orders;
         }
 
         private void ChangeStatusBtn_Click(object sender, RoutedEventArgs e)
         {
             var selectedOrder = CurrentOrdersGrid.SelectedItem as Order;
-            if (selectedOrder != null && selectedOrder.Status == "")
+            if (selectedOrder != null && selectedOrder.Status == "Принят")
             {
-                selectedOrder.Status = 
+                selectedOrder.Status = "Готовится";
+                _context.SaveChanges();
+                MessageBox.Show("Статус заказа успешно сменен на \"Готовится\"", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                LoadOrdersAsync();
+            }
+            else if (selectedOrder != null && selectedOrder.Status == "Готовится")
+            {
+                selectedOrder.Status = "Готов";
+                _context.SaveChanges();
+                MessageBox.Show("Статус заказа успешно сменен на \"Готов\"", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                LoadOrdersAsync();
+            }
+            else
+            {
+                MessageBox.Show("Выберите заказ для смены статуса!", "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
     }
