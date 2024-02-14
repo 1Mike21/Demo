@@ -22,6 +22,7 @@ namespace Sokolov.Views.Waiter
     public partial class AddOrderWindow : Window
     {
         private readonly SokolovContext _context;
+
         private Int32 user;
 
         public AddOrderWindow(Int32 currentUser = 1)
@@ -34,7 +35,6 @@ namespace Sokolov.Views.Waiter
             {
                 WaiterWindow waiterWindow = new WaiterWindow(this.user);
                 waiterWindow.Show();
-                this.Close();
             };
 
             var products = _context.Products.ToList();

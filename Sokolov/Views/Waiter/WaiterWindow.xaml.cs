@@ -22,6 +22,7 @@ namespace Sokolov.Views.Waiter
     public partial class WaiterWindow : Window
     {
         private readonly SokolovContext _context;
+
         private Int32 user;
 
         public WaiterWindow(Int32 currentUser = 1)
@@ -29,7 +30,6 @@ namespace Sokolov.Views.Waiter
             InitializeComponent();
             _context = new SokolovContext();
             this.user = currentUser;
-
             LoadOrdersAsync();
 
             CreateOrderBtn.Click += (sender, e) =>

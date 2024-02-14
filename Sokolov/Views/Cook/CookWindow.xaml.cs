@@ -50,6 +50,7 @@ namespace Sokolov.Views.Cook
             {
                 selectedOrder.Status = "Готовится";
                 _context.SaveChanges();
+
                 MessageBox.Show("Статус заказа успешно сменен на \"Готовится\"", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
                 LoadOrdersAsync();
             }
@@ -57,6 +58,7 @@ namespace Sokolov.Views.Cook
             {
                 selectedOrder.Status = "Готов";
                 _context.SaveChanges();
+
                 MessageBox.Show("Статус заказа успешно сменен на \"Готов\"", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
                 LoadOrdersAsync();
             }
