@@ -29,14 +29,14 @@ namespace Sokolov.Views.Admin
             InitializeComponent();
 
             _context = new SokolovContext();
-            LoadEmployees();
+            LoadEmployeesAsync();
         }
 
-        private void LoadEmployees()
+        private async void LoadEmployeesAsync()
         {
             try
             {
-                var employees = _context.Users.Include(u => u.Role).Where(u => u.Status == "Active").ToList();
+                var employees = await _context.Users.Include(u => u.Role).ToListAsync();
                 EmployeesGrid.ItemsSource = employees;
             }
             catch (Exception ex)
@@ -51,9 +51,10 @@ namespace Sokolov.Views.Admin
 
             if (selectedEmployee != null)
             {
-                    selectedEmployee.Status = "Inactive";
-                    _context.SaveChanges();
-                    EmployeesGrid.Items.Remove(selectedEmployee);
+                selectedEmployee.Status = "Уволен";
+                _context.SaveChanges();
+                MessageBox.Show("Сотрудник успешно уволен", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                LoadEmployeesAsync();
             }
             else
             {
@@ -65,7 +66,7 @@ namespace Sokolov.Views.Admin
         {
             var addEmployeeWindow = new AddEmployeeWindow();
             addEmployeeWindow.ShowDialog();
-            LoadEmployees();
+            LoadEmployeesAsync();
         }
         private void BackAdminWindowBtn_Click(object sender, RoutedEventArgs e)
         {

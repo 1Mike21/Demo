@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:Sokolov"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        
         <LinearGradientBrush x:Key="WindowBackground" StartPoint="0,0" EndPoint="1,1">
             <GradientStop Color="DeepSkyBlue" Offset="0.0"/>
             <GradientStop Color="DeepSkyBlue" Offset="0.25"/>
@@ -13,6 +14,7 @@
         </LinearGradientBrush>
         <Style TargetType="Label">
             <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="./Fonts/#Roboto"/>
             <Setter Property="FontSize" Value="14pt"/>
         </Style>
         <Style TargetType="DataGrid" x:Key="Datagrid">

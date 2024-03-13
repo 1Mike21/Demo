@@ -36,6 +36,12 @@ namespace Sokolov.Views.Waiter
             {
                 AddOrderWindow addOrderWindow = new AddOrderWindow(this.user);
                 addOrderWindow.Show();
+            };
+
+            LogoutBtn.Click += (sender, e) =>
+            {
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
                 this.Close();
             };
         }
@@ -55,6 +61,10 @@ namespace Sokolov.Views.Waiter
                 _context.SaveChanges();
                 MessageBox.Show("Статус заказа успешно сменен", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
                 LoadOrdersAsync();
+            }
+            else if (selectedOrder.Status == "Готовится" || selectedOrder.Status == "Принят")
+            {
+                MessageBox.Show("Вы можете менять статус только для заказов со статусами \"Готов\"", "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             else
             {

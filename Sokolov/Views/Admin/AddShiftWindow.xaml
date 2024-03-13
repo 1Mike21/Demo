@@ -36,7 +36,21 @@
             </StackPanel>
             <StackPanel Margin="10" Orientation="Horizontal">
                 <Label Content="Сотрудники:" Margin="0,0,13,0"/>
-                <ListBox Name="EmployeesListBox" DisplayMemberPath="Surname" SelectionMode="Multiple" Width="200" Height="150"/>
+                <ListBox Name="EmployeesListBox" SelectionMode="Multiple" Width="250" Height="150">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="{}{0} {1} - {2}">
+                                        <Binding Path="Surname"/>
+                                        <Binding Path="Name"/>
+                                        <Binding Path="Role.Name"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
             </StackPanel>
             <Button Style="{StaticResource MainButton}" Content="Создать смену" Width="150" MinHeight="40" Margin="20" Click="CreateShiftBtn_Click"/>
         </StackPanel>
