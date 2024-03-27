@@ -9,6 +9,8 @@
 
   <ItemGroup>
     <None Remove="Fonts\Roboto.ttf" />
+    <None Remove="Fonts\RubikMoonrocks.ttf" />
+    <None Remove="Fonts\Splash.ttf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +28,12 @@
 
   <ItemGroup>
     <Resource Include="Fonts\Roboto.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\RubikMoonrocks.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Splash.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

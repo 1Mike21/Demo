@@ -31,12 +31,6 @@ namespace Sokolov.Views.Waiter
             _context = new SokolovContext();
             this.user = currentUser;
 
-            BackBtn.Click += (sender, e) =>
-            {
-                WaiterWindow waiterWindow = new WaiterWindow(this.user);
-                waiterWindow.Show();
-            };
-
             var products = _context.Products.ToList();
             ProductsListBox.ItemsSource = products;
         }

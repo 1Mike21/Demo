@@ -35,7 +35,6 @@
                 <ListBox Name="ProductsListBox" DisplayMemberPath="Title" SelectionMode="Multiple" Width="200" Height="150"/>
             </StackPanel>
             <Button Style="{StaticResource MainButton}" Content="Создать заказ" Width="150" MinHeight="40" Margin="20" Click="CreateOrderBtn_Click"/>
-            <Button Name="BackBtn" Style="{StaticResource MainButton}" Content="Назад" Width="150" MinHeight="40"/>
         </StackPanel>
     </Grid>
 </Window>

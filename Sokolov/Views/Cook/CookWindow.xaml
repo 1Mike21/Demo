@@ -24,7 +24,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Дата" Binding="{Binding Date, StringFormat={}{0:dd.MM.yy HH:mm}}" Width="*"/>
                 <DataGridTextColumn Header="Статус" Binding="{Binding Status}" Width="*"/>
-                <DataGridTextColumn Header="Клиент" Width="*">
+                <DataGridTextColumn Header="Официант" Width="*">
                     <DataGridTextColumn.Binding>
                         <MultiBinding StringFormat="{}{0} {1}">
                             <Binding Path="User.Name"/>
