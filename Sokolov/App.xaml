@@ -23,7 +23,7 @@
         <Style TargetType="TextBox">
             <Setter Property="Width" Value="200"/>
             <Setter Property="Height" Value="25"/>
-            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="BorderBrush" Value="Gray"/>
         </Style>

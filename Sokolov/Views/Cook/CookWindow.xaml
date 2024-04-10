@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sokolov.Views.Cook"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Background="{StaticResource WindowBackground}"
         WindowState="Maximized"
         Height="300"
